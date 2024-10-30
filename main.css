@@ -4,6 +4,7 @@ header {
     text-align: center;
     padding: 10px 0;
     background-color: #ea3d3d;
+   
 }
 footer {
     background-color: #0a0b0b;
@@ -16,7 +17,7 @@ footer {
     font-size: 15px;
 }
 body{
-    background-color: floralwhite;
+    background-color: rgb(153, 162, 162);
 }
 
 .menu{
@@ -30,21 +31,81 @@ font-family: Arial, Helvetica, sans-serifs;
 }
 
 .products{
-    position: absolute;
-    display: none;
-    left:0;
-    background-color: #0d0d0d;
-    color: #fff;
-    width: 150px;
-    padding: 12px 16px;
-    z-index: 1;
+position: absolute;
+display: none;
+left:0;
+background-color: #0d0d0d;
+color: #fff;
+width: 150px;
+padding: 12px 16px;
+z-index: 1;
+}
     
-    
-    }
-    .menu:hover .products{
-        display: block
-    }
+.menu:hover .products{
+display: block
+}
 
 a { 
 text-decoration: none;
+}
+
+.slkyt{
+display: flex;
+max-width: 100%;
+height: auto;
+}
+
+.nhl {
+flex: 1;
+text-align: center;
+margin: 16px;
+}
+.ytvideo {
+flex: 1;
+text-align: center;
+margin: 16px;
+}
+.khl {
+flex: 1;
+text-align: center;
+ margin: 16px;
+}
+
+.brands{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.bauer{
+    display: flex;
+    justify-content: center;
+    max-width: 100px;
+    height: auto;
+    margin: 50px;
+}
+
+.warrior{
+    display: flex;
+    justify-content: center;
+    max-width: 100px;
+    height: auto;
+    margin: 50px;
+}
+.ccm{
+    max-width: 100px;
+    height: auto;
+    margin: 50px;
+}
+.true{
+    max-width: 100px;
+    height: auto;
+    margin: 100px;
+}
+hr {
+    border: none;           
+    height: 5px;             
+    width: 100%;              
+    background-color: #333;  
+    margin: 20px auto;       
 }
