@@ -17,7 +17,7 @@ footer {
     font-size: 15px;
 }
 body{
-    background-color: rgb(153, 162, 162);
+    background-color: rgb(187, 230, 230);
 }
 
 .menu{
@@ -105,12 +105,16 @@ text-align: center;
 hr {
     border: none;           
     height: 5px;             
-    width: 100%;              
+                 
     background-color: #333;  
     margin: 20px auto;       
 }
-
-
+.konatkt{
+   display: flex;
+}
+.text{
+    margin-left:80px
+}
 
 
 
