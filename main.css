@@ -118,6 +118,29 @@ hr {
     font-size: large;
 }
 
+.palice{
+    display: flex;
+    max-width: 100%;
+text-align: center;
+height: auto;
+}
+.plaica1{
+    flex: 1;
+text-align: center;
+margin: 16px;
+
+}
+.palica2{
+    flex: 1;
+    text-align: center;
+    margin: 16px;
+}
+.palica3{
+    flex: 1;
+    text-align: center;
+    margin: 16px;
+}
+
 
 
 
