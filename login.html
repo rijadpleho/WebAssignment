@@ -25,15 +25,64 @@
     </nav>
 </nav>
 <br><center><b><i>
-<h1 style="font-family: Arial, Helvetica, sans-serif;">Answer the questions:</h1></i></b></center>
+<h1 style="font-family: Arial, Helvetica, sans-serif;">Answer the questions so that your gear can fit properly:</h1></i></b></center>
 <div class="login">
+    <form>
 <center>
-<fieldset style="width: 350px; border-width: 7px;">
-
-</div>
+<fieldset style="width: 350px; border-width: 7px;"><br>
     
+    <b><label>Name:</label>
+    <input type="text" id="name" required>
+    <br><br>
+    <label>Surname:</label>
+    <input type="text" id="surname" required>
+    <br><br>
+    <label>Email:</label>
+    <input type="email" id="email" required>
+    <br><br>
+    <label>Date of birth:</label>
+    <input type="datetime-local" id="birth" required>
+<br><br>
+<label>Height:</label></b>
+    <input type="text" id="height" required><br><br>
+    <b>
+<label>Your level:</label><br></b>
+<input type="checkbox" id="jr" value="jr">
+<label for="jr">Junior</label><br>
+<input type="checkbox" id="int" value="int">
+<label for="int">Intermediut</label><br>
+<input type="checkbox" id="sr" value="sr">
+<label for="sr">Senior</label><br><br><b>
+<label>Skate size:</label></b>
+    <input type="number" id="sk"  min="30" max="49" required>
+    <br><br>
+<b>
+<label for="Stickflex">Stick flex:</label></b>
+<input list="stickflexes" id="Stickflex" name="Stickflex" />
 
-</fieldset></center></div>
+<datalist id="stickflexes">
+  <option value="65 flex"></option>
+  <option value="70 flex"></option>
+  <option value="75 flex"></option>
+  <option value="80 flex"></option>
+  <option value="85 flex"></option>
+  <option value="90 flex"></option>
+</datalist>     <br><br>   
+
+</fieldset></center></form></div>
+<br>
+<center>
+<a href="">
+<input type="submit" value="Submit" style="background-color: lightcyan; color: black; border: none; padding: 20px 40px; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
+
+</a>
+</center>
+
+
+
+
+
+
 <br><br><br>
 
 <center>
