@@ -143,8 +143,19 @@ margin: 16px;
 .login{
 font-size: larger;
 
-
 }
 
 
+
+@media screen and(max-width:600px){
+
+.column{
+
+    width: 100%;
+}
+.all{
+    flex-direction: column;
+}
+
+}
 
