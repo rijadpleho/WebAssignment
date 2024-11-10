@@ -159,3 +159,19 @@ font-size: larger;
 
 }
 
+
+th, td{
+    text-align: center;
+    padding: 7px 21px;
+}
+
+.buttons{
+    display:flex;
+    justify-content: center;
+    gap:20px;
+}
+
+.geolog{
+
+font-size: larger;
+}

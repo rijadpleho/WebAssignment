@@ -27,34 +27,34 @@
 <br><center><b><i>
 <h1 style="font-family: Arial, Helvetica, sans-serif;">Answer the questions so that your gear can fit properly:</h1></i></b></center>
 <div class="login">
-    <form action="https://jsonplaceholder.typicode.com/" target="_blank" method="post">
+    <form action="https://jsonplaceholder.typicode.com/posts" target="_blank" method="post">
         <center>
 <fieldset style="width: 350px; border-width: 7px; text-align: left;"><br>
     
     <b><label>Name:</label>
-    <input type="text" id="name" required>
+    <input type="text" id="name" name="name" required>
     <br><br>
     <label>Surname:</label>
-    <input type="text" id="surname" required>
+    <input type="text" id="surname" name="surname" required>
     <br><br>
     <label>Email:</label>
-    <input type="email" id="email" required>
+    <input type="email" id="email" name="email" required>
     <br><br>
     <label>Date of birth:</label>
-    <input type="datetime-local" id="birth" required>
+    <input type="datetime-local" id="birth" name="birth" required>
 <br><br>
 <label>Height:</label></b>
-    <input type="text" id="height" required><br><br>
+    <input type="text" id="height" name="height" required><br><br>
     <b>
 <label>Your level:</label><br></b>
-<input type="checkbox" id="jr" value="jr">
+<input type="checkbox" id="jr" name="level" value="jr">
 <label for="jr">Junior</label><br>
-<input type="checkbox" id="int" value="int">
+<input type="checkbox" id="int" name="level" value="int">
 <label for="int">Intermediut</label><br>
-<input type="checkbox" id="sr" value="sr">
+<input type="checkbox" id="sr" name="level" value="sr">
 <label for="sr">Senior</label><br><br><b>
 <label>Skate size:</label></b>
-    <input type="number" id="sk"  min="30" max="49" required>
+    <input type="number" id="sk" name="size" min="30" max="49" required>
     <br><br>
 <b>
 <label for="Stickflex">Stick flex:</label></b>
@@ -69,14 +69,45 @@
   <option value="90 flex"></option>
 </datalist>     <br><br>   
 
-</fieldset></center></form></div>
+</fieldset></center>
 <br>
 <center>
-<a href="">
-<input type="submit" value="Submit" style="background-color: lightcyan; color: black; border: none; padding: 20px 40px; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
+    <div class="buttons">
 
+<button onclick="getLocation()" style="padding: 10px; font-size: 20px; background-color: lightcyan; border: none; ">Your Location</button>
+
+
+<a href="main.html">
+<input type="submit" value="Submit" style="background-color: lightcyan; color: black; border: none; padding: 20px 40px; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
 </a>
-</center>
+
+</div>
+
+
+</center></form></div>
+
+
+
+   <div class="geolog">
+<center>
+<p id="demo"></p>
+<script>
+const x= document.getElementById("demo");
+function getLocation(){
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showPosition);   
+    }else{
+        x.innerHTML="Geolocation is not supported by this browser";
+
+    }
+    }
+
+    function showPosition(position){
+        x.innerHTML="Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+    }
+</script></center></div>
+
+
 
 
 
