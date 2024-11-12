@@ -40,6 +40,27 @@
     </div>
 
 </center>
+<br><br>
+<center>
+<button onclick=showRobotchDialog() style="padding: 30px; font-size: larger; background-color: lightcyan;">Hockey Store</button></center>
+<dialog id="robotch">
+<h2>Take a look at our store?</h2>
+<center>
+<form>
+   <a href="store.html">
+    <input type="button" value="Yes"  style="width: 60px;"></a> 
+    <button onclick=Submitbtn() type="button" style="width: 60px;">No</button>
+</form></center>
+</dialog>
+<script>
+    const dialog= document.getElementById("robotch")
+   function showRobotchDialog(){
+    dialog.showModal()
+   }
+   function Submitbtn(){
+    dialog.close()
+   }
+</script>
 
 <br><br><br><br>
 
