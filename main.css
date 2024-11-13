@@ -184,3 +184,10 @@ font-size: larger;
     border: 3px solid #000000;
     
   }
+
+  .carousel-image {
+    max-width: 50%;
+    max-height: 500px;
+    object-fit: cover;
+    margin: 0 auto;
+}
