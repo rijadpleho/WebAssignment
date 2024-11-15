@@ -18,6 +18,7 @@ footer {
 }
 body{
     background-color: rgb(183, 197, 197);
+    margin-right: 0px;
 }
 
 .menu{
@@ -164,26 +165,53 @@ hr {
 
 .palice{
     display: flex;
+    flex-wrap: wrap;
     max-width: 100%;
-text-align: center;
-height: auto;
+    text-align: center;
+    height: auto;
+    justify-content: center;
 }
-.plaica1{
-    flex: 1;
-text-align: center;
-margin: 16px;
+.palica1, .palica2, .palica3 {
+    flex: 1 1 20%;
+    text-align: center;
+    margin: 16px;
+}
 
+.palica1 img, .palica2 img, .palica3 img {
+    width: 60%;  
+    margin: auto;
 }
-.palica2{
-    flex: 1;
-    text-align: center;
-    margin: 16px;
+
+@media (max-width: 768px) {
+    .palice {
+        flex-direction: column;  
+    }
+
+    .palica1, .palica2, .palica3 {
+        flex: 1 1 20%;
+        margin: 8px 0;
+    }
+
+    .palica1 img, .palica2 img, .palica3 img {
+        width: 100%;  
+    }
 }
-.palica3{
-    flex: 1;
-    text-align: center;
-    margin: 16px;
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.2em; 
+    }
+
+    .palica1, .palica2, .palica3 {
+        margin: 4px 0;
+    }
+
+    input[type="button"] {
+        padding: 10px 20px;
+        font-size: 16px; 
+    }
 }
+
 .login{
 font-size: larger;
 
@@ -219,12 +247,26 @@ font-size: larger;
 
 
 #dragdrop {
-    width: 600px;
+    justify-content: center;
+    width: 400px;
     height: 490px;
     padding: 10px;
     border: 3px solid #000000;
     
   }
+
+  .dropzone {
+    width: 30%; 
+    height: 100px; 
+    border: 2px dashed #ccc;
+    border-radius: 8px; 
+    margin: 0 auto;  
+    display: flex;
+    align-items: center;  
+    justify-content: center;  
+    background-color: #f9f9f9;  
+    text-align: center;
+}
 
   .carousel-image {
     max-width: 50%;
