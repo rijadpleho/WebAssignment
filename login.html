@@ -26,12 +26,12 @@
     </nav>
 </nav>
 </nav>
-<br><center><b><i>
-<h1 style="font-family: Arial, Helvetica, sans-serif;">Answer the questions so that your gear can fit properly:</h1></i></b></center>
-<div class="login">
-    <form action="https://jsonplaceholder.typicode.com/posts" target="_blank" method="post">
-        <center>
-<fieldset style="width: 350px; border-width: 7px; text-align: left;"><br>
+<br><b><i>
+<h1 style="font-family: Arial, Helvetica, sans-serif;">Answer the questions so that your gear can fit properly:</h1></i></b>
+<div class="login" style="margin: 0px; display:flex; justify-content: center;">
+    <form action="https://jsonplaceholder.typicode.com/posts" target="_blank" method="post" style="margin: 0%; width: 300px;">
+        
+<fieldset style="width: 300px; text-align: left; margin:0px"><br>
     
     <b><label>Name:</label>
     <input type="text" id="name" name="name" required>
@@ -71,12 +71,12 @@
   <option value="90 flex"></option>
 </datalist>     <br><br>   
 
-</fieldset></center>
+</fieldset>
 <br>
-<center>
+
     <div class="buttons">
 
-<button onclick="getLocation()" style="padding: 10px; font-size: 20px; background-color: lightcyan; border: none; ">Your Location</button>
+<button onclick="getLocation()" style="padding: 20px 40px; font-size: 20px; background-color: lightcyan; border: none; ">Your Location</button>
 
 
 <a href="main.html">
@@ -86,7 +86,7 @@
 </div>
 
 
-</center></form></div>
+</form></div>
 
 
 
@@ -107,7 +107,7 @@ function getLocation(){
     function showPosition(position){
         x.innerHTML="Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
     }
-</script></center></div>
+</script></div>
 
 
 
