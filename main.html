@@ -64,6 +64,34 @@
    }
 </script>
 
+<div class="themeSwitcher">
+    <button id="light" style="background-color: lightcyan;">Light Theme</button>
+    <button id="dark" style="background-color: lightcyan;">Dark Theme</button>
+    <button id="small" style="background-color: lightcyan;">Small Font</button>
+    <button id="large" style="background-color: lightcyan;">Large Font</button>
+</div>
+<script>
+   document.getElementById("light").addEventListener("click",()=>{
+    document.body.classList.remove("dark");
+   });
+   document.getElementById("dark").addEventListener("click",()=>{
+    document.body.classList.add("dark");
+   });
+
+   document.getElementById("small").addEventListener("click",()=>{
+    document.body.classList.remove("large");
+    document.body.classList.add("small");
+   });
+   document.getElementById("large").addEventListener("click", () => {
+  document.body.classList.remove("font");
+  document.body.classList.add("font");
+});
+</script>
+
+
+
+
+
 <br><br><br><br>
 
 <center><h3 style="color: black; font-size: 40px; font-family:Arial, Helvetica, sans-serif ;">Brands:</h3>

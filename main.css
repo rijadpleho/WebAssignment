@@ -19,6 +19,9 @@ footer {
 body{
     background-color: rgb(183, 197, 197);
     margin-right: 0px;
+    color: black;
+    display: flex;
+
 }
 
 .menu{
@@ -355,4 +358,22 @@ font-size: larger;
     max-height: 500px;
     object-fit: cover;
     margin: 0 auto;
+}
+
+.themeSwitcher{
+    display:flex;
+    gap:10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+body.dark{
+    background-color: darkred;
+    color:white
+}
+body.small{
+    font-size: 12px;
+}
+
+body.large{
+    font-size: 80px;
 }
