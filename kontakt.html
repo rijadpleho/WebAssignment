@@ -52,10 +52,33 @@
 
              <h1 style="font-family: Arial, Helvetica, sans-serif;">Contact us</h1>
              <hr style=" height: 3px; margin-right: 70px; margin-top: -7px;" >
-             <p><b>Managers E-mail:</b><a href="mailto: amela.vatres@stu.ibu.edu.ba" style="color: black; font-family: Arial, Helvetica, sans-serif;"> amela.vatres@stu.ibu.edu.ba 
-            </a>
-             </p>
-             <p><b>Owners Phone:</b><a href="tel:+38762732234" style="color: black; font-family: Arial, Helvetica, sans-serif; "></a>+387 62 732 234</p><br>
+             <div>
+                <button class="kontaktButton" onclick="klik('mail')" style="color: black; font-family: Arial, Helvetica, sans-serif;">Managers E-mail? </button>
+                <div id="mail" class="kontakt" style="display: none;">
+                    <a href="mailto: amela.vatres@stu.ibu.edu.ba" style="color: black; font-family: Arial, Helvetica, sans-serif;"> amela.vatres@stu.ibu.edu.ba 
+                    </a>
+
+                </div>
+                <br><br>
+             </div>
+             <div>
+                <button class="kontaktButton" onclick="klik('broj')" style="color: black; font-family: Arial, Helvetica, sans-serif;">Owners Phone? </button>
+                <div id="broj" class="kontakt" style="display: none;">
+                    <a href="tel:+38762732234" style="color: black; font-family: Arial, Helvetica, sans-serif; ">+387 62 732 234</a>
+
+                </div>
+             </div>
+
+             <script>
+                function klik(id){
+                    const kontakt=document.getElementById(id);
+                    if(kontakt.style.display === "none" || kontakt.style.display === ""){
+                        kontakt.style.display ="block";
+                    }else{
+                        kontakt.style.display="none";
+                    }
+                }
+             </script><br>
 
        
              <h1 style="font-family: Arial, Helvetica, sans-serif;">Price range</h1>
