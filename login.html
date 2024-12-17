@@ -51,7 +51,10 @@
     <input type="datetime-local" id="birth" name="birth" required>
 <br><br>
 <label>Height:</label></b>
-    <input type="text" id="height" name="height" required><br><br>
+    <input type="text" id="height" name="height" min="50" max="210" required>
+    <span id="heightError" style="display: none; font-size: smaller;">Your height must be between 50cm and 210cm</span>
+    
+    <br><br>
     <b>
 <label>Your level:</label><br></b>
 <input type="checkbox" id="jr" name="level" value="jr">
@@ -117,6 +120,12 @@ document.getElementById("password").addEventListener("input", function(){
     else{
         strenght.textContent="Medium Password";
     }
+});
+
+document.getElementById("height").addEventListener("input", function(){
+    const height=this.value;
+    document.getElementById("heightError").style.display=height>= 50 && height <=210 ? "none" : "inline";
+    
 });
 
 const x= document.getElementById("demo");
