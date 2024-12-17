@@ -41,7 +41,12 @@
     <br><br>
     <label>Email:</label>
     <input type="email" id="email" name="email" required>
+    <span id="emailError" style="display: none; font-size: smaller;">Invalid Email "@gmail.com" is required</span>
     <br><br>
+   <label>Password:</label>
+   <input type="password" id="password" name="password" required>
+   <span id="strenghtpass"></span>
+     <br><br>
     <label>Date of birth:</label>
     <input type="datetime-local" id="birth" name="birth" required>
 <br><br>
@@ -94,6 +99,26 @@
 <center>
 <p id="demo"></p>
 <script>
+document.getElementById("email").addEventListener("input", function(){
+    const email=this.value;
+    const must= /@gmail.com/;
+    document.getElementById("emailError").style.display=must.test(email) ? "none" : "inline";
+});
+
+document.getElementById("password").addEventListener("input", function(){
+    const password=this.value;
+    const strenght=document.getElementById("strenghtpass");
+    if(password.length<5){
+        strenght.textContent="Weak Password";
+    }
+    else if(password.match(/[A-Z]/) && password.match(/[!#$%&]/)){
+        strenght.textContent="Strong Password";
+    }
+    else{
+        strenght.textContent="Medium Password";
+    }
+});
+
 const x= document.getElementById("demo");
 function getLocation(){
     if(navigator.geolocation){
