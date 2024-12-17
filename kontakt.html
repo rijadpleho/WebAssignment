@@ -120,10 +120,58 @@
             </div>
 
 <br><br>
+<h1 style="font-family: Arial, Helvetica, sans-serif;">About Our Products</h1>
+<hr style=" height: 3px; margin-right: 70px; margin-top: -7px;" >
+<div class="AccMenu">
+    <div class="accI">
+        <div class="Naslov">
+            <h3>Skates</h3>
+           
+        </div>
+        <div class="odgovor">
+            <p>We offer skates that are high quality, affordable and available in every site, cetering to everyone from kids to seniors. </p>
+        </div>
+    </div>
+    <div class="accI">
+        <div class="Naslov">
+            <h3>Sticks</h3>
+        
+        </div>
+        <div class="odgovor">
+                <p>We offer the best type of stiks on the market. High performance stiks for kids and older. We offer every type of brand there is, like CCM and BAUER</p>
+            </div>
+        
+        </div>
+        <div class="accI">
+            <div class="Naslov">
+                <h3>Gloves</h3> 
+
+            </div>
+            <div class="odgovor">
+                <p>We offer the best and most comfortable gloves there are. Ranging from kids all the way to senior sitze.</p>
     </div>
 </div>
+</div>
 
+<script>
+const accNaslov=document.querySelectorAll('.Naslov');
+accNaslov.forEach(Naslov => {
+    Naslov.addEventListener('click', () =>{
+        const dole= Naslov.classList.contains('active');
+        document.querySelectorAll('.Naslov').forEach(item=>{
+            item.classList.remove('active');
+            item.nextElementSibling.style.display='none';
+        });
+        if(!dole){
+            Naslov.classList.add('active');
+            Naslov.nextElementSibling.style.display='block';
+        }   
+     });
+});
 
+</script>
+
+   
 
 
 
