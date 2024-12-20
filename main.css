@@ -477,5 +477,8 @@ flex-direction: column;
     display: none;
     text-align: center;
     font-size: medium;
+    background-color: rgb(218, 218, 211);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
 
 }
