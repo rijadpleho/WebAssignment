@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HOCKEY SHOP</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet"  href="main.css">
+         <script src="main.js" defer></script>
+    </head>
+    <body>
+<div class="all">
+<header>
+    <h1 style="font-family: OCR A Extended; font-size: 40px;">HOCKEY SHOP</h1>
+    
+</header>
+
+<nav class="menu">
+    <img src="menu.png" class="aaa" width="50px"><br>
+    <nav class="menu2" >
+    <nav class="products"><br>
+        <a href="palice.html" style="color: white;">STICKS</a><br><br>
+        <a href="skates.html" style="color: white;">SKATES</a><br><br>
+        <a href="rukavice.html" style="color: white;">GLOVES</a><br><br>
+        <a href="kontakt.html" style="color: white;">ABOUT US</a><br>
+    </nav>
+</nav>
+</nav>
+<br><br><br><br><br>
+
+</head>
+<body><center>
+    <h1 style="margin-top: -25px;">HOCKEY CHAMPIONS</h1><br><br>
+<div class="galerija">
+    <img src="champ1.jpg" alt="Image 1" data-large="champ1.jpg">
+    <img src="champs4.webp" alt="Image 2" data-large="champs4.webp">
+    <img src="champs3.jpg" alt="Image 3" data-large="champs3.jpg">
+</div></center>
+
+<div class="mod" id="slika">
+    <span class="zatvori" id="zatvara">&times;</span>
+    <img id="slika2"  alt="slikaa">
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mod = document.getElementById('slika');
+        const slika2 = document.getElementById('slika2');
+        const zatvara= document.getElementById('zatvara');
+        const galerija = document.querySelectorAll('.galerija img');
+
+        galerija.forEach(image => {
+            image.addEventListener('click', () => {
+                const largeImageSrc = image.getAttribute('data-large');
+                slika2.src = largeImageSrc;
+                slika2.style.transform = 'scale(1.0)'; 
+                mod.style.display = 'flex';
+            });
+        });
+
+        zatvara.addEventListener('click', () => {
+            mod.style.display = 'none';
+        });
+
+        mod.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+</script>
+<div class="viewmore">
+    <button class="viewmorebtn" id="buttonview">View More</button>
+    <div class="textispod" id="doleText">
+        <h2>NHL CHAMPIONS</h2>
+        <p>These are some of the best NHL teams. In the first picture are the Colorado Avalenches, the won the stanley cup in 2022. In the second picture are the Tampa Bay Lighting, and have won the stanley cup in 2021. The last picture are the Pittsburg Penguins and have won the stanley cup in 2017 </p>
+
+    </div>
+</div>
+<script>
+    const viewmore=document.getElementById('buttonview');
+    const text=document.getElementById('doleText');
+    viewmore.addEventListener('click',()=>{
+        if(text.style.display === 'block'){
+            text.style.display = 'none';
+            viewmore.textContent='View More';
+        }
+        else{
+            text.style.display='block';
+            viewmore.textContent='View Less';
+        }
+    });
+</script>
+<br><br><br><br>
+<center>
+    <footer>
+        <p>&copy;Official Hockey Shop- Rijad Pleho</p>
+    </footer>
+    </center>
+    
+    
+      </div></body>
+    </html>

@@ -5,7 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet"  href="main.css">
-        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     </head>
     <body>
 
@@ -142,6 +143,26 @@ function getLocation(){
         x.innerHTML="Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
     }
 </script></div>
+<script>
+   document.querySelector("form").addEventListener("submit", function(e){
+    e.preventDefault();
+    const name=document.getElementById("name").value.trim();
+    const surname=document.getElementById("surname").value.trim();
+    const email=document.getElementById("email").value.trim();
+    const password=document.getElementById("password").value.trim();
+    const birth=document.getElementById("birth").value.trim();
+    const height=document.getElementById("height").value.trim();
+    const skateSize=document.getElementById("sk").value.trim();
+    const stickFlex=document.getElementById("Stickflex").value.trim();
+
+    if(!name || !surname || !email || !password || !birth || !height || !skateSize ||!stickFlex ){
+       toastr.error("Error! Fill in all the fields");
+       return;
+    }
+    toastr.success("Your form was successfully entered")
+
+   });
+</script>
 
 
 
