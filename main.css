@@ -488,3 +488,28 @@ flex-direction: column;
     font-size: large;
     text-decoration: underline;
 }
+
+#komentari li {
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+#komentari .edit {
+    background-color:  rgb(183, 197, 197);
+    color: black;
+    border: 0;
+    width: 100px;
+    margin-left: 10px;
+}
+
+
+#komentari .delete {
+    background-color:  rgb(183, 197, 197);
+    color: black;
+    border: 0;
+    width: 100px;
+    margin-left: 10px;
+}
+

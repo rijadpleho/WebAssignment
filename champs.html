@@ -4,6 +4,7 @@
         <title>HOCKEY SHOP</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
          <link rel="stylesheet"  href="main.css">
          <script src="main.js" defer></script>
     </head>
@@ -91,6 +92,52 @@
         }
     });
 </script>
+<hr>
+<ul id="komentari" ></ul>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+ $(document).ready(function () {
+    let data = [
+        { author: "User11234", content: "They are the best!!" },
+        { author: "Adnan", content: "Pittsburg is a bad team" },
+        { author: "Darko_Lazic", content: "Hockeyy is really fun to watch!" }
+    ];
+    let commentsList = $('#komentari');
+
+   
+    data.forEach(function (comment, index) {
+        commentsList.append(`
+            <li data-index="${index}">
+                <strong>${comment.author}:</strong> 
+                <span class="comment-text">${comment.content}</span>
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
+            </li>
+        `);
+    });
+
+   
+    commentsList.on('click', '.delete', function () {
+        let listItem = $(this).closest('li');
+        listItem.remove(); 
+        alert('Obrisano');
+    });
+
+    
+    commentsList.on('click', '.edit', function () {
+        let listItem = $(this).closest('li');
+        let commentText = listItem.find('.comment-text');
+        let newComment = prompt('Edituj komentar', commentText.text());
+        if (newComment) {
+            commentText.text(newComment); 
+            alert('Izmjenjeno');
+        }
+    });
+});
+
+
+</script>
+
 <br><br><br><br>
 <center>
     <footer>
