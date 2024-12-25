@@ -23,6 +23,7 @@
         <a href="skates.html" style="color: white;">SKATES</a><br><br>
         <a href="rukavice.html" style="color: white;">GLOVES</a><br><br>
         <a href="kontakt.html" style="color: white;">ABOUT US</a><br>
+        <a href="champs.html" style="color: white;">CHAMPIONS</a><br>
     </nav>
 </nav>
 </nav>
@@ -41,12 +42,20 @@
     <br><br>
     <label>Email:</label>
     <input type="email" id="email" name="email" required>
+    <span id="emailError" style="display: none; font-size: smaller;">Invalid Email "@gmail.com" is required</span>
     <br><br>
+   <label>Password:</label>
+   <input type="password" id="password" name="password" required>
+   <span id="strenghtpass"></span>
+     <br><br>
     <label>Date of birth:</label>
     <input type="datetime-local" id="birth" name="birth" required>
 <br><br>
 <label>Height:</label></b>
-    <input type="text" id="height" name="height" required><br><br>
+    <input type="text" id="height" name="height" min="50" max="210" required>
+    <span id="heightError" style="display: none; font-size: smaller;">Your height must be between 50cm and 210cm</span>
+    
+    <br><br>
     <b>
 <label>Your level:</label><br></b>
 <input type="checkbox" id="jr" name="level" value="jr">
@@ -79,9 +88,9 @@
 <button onclick="getLocation()" style="padding: 20px 40px; font-size: 20px; background-color: lightcyan; border: none; ">Your Location</button>
 
 
-<a href="main.html">
-<input type="submit" value="Submit" style="background-color: lightcyan; color: black; border: none; padding: 20px 40px; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
-</a>
+
+<input type="button" value="Submit" id="btnsubm" style="background-color: lightcyan; color: black; border: none; padding: 20px 40px; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
+<div id="poruka"></div>
 
 </div>
 
@@ -94,6 +103,32 @@
 <center>
 <p id="demo"></p>
 <script>
+document.getElementById("email").addEventListener("input", function(){
+    const email=this.value;
+    const must= /@gmail.com/;
+    document.getElementById("emailError").style.display=must.test(email) ? "none" : "inline";
+});
+
+document.getElementById("password").addEventListener("input", function(){
+    const password=this.value;
+    const strenght=document.getElementById("strenghtpass");
+    if(password.length<5){
+        strenght.textContent="Weak Password";
+    }
+    else if(password.match(/[A-Z]/) && password.match(/[!#$%&]/)){
+        strenght.textContent="Strong Password";
+    }
+    else{
+        strenght.textContent="Medium Password";
+    }
+});
+
+document.getElementById("height").addEventListener("input", function(){
+    const height=this.value;
+    document.getElementById("heightError").style.display=height>= 50 && height <=210 ? "none" : "inline";
+    
+});
+
 const x= document.getElementById("demo");
 function getLocation(){
     if(navigator.geolocation){
@@ -108,6 +143,27 @@ function getLocation(){
         x.innerHTML="Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
     }
 </script></div>
+<script>
+    document.getElementById("btnsubm").addEventListener("click", function(){
+        const form=document.querySelector("form");
+        const dataF= new FormData(form);
+        const data= Object.fromEntries(dataF.entries());
+        const poruka=document.getElementById("poruka");
+        fetch("https://jsonplaceholder.typicode.com/posts", {
+            method:"POST",
+            headers:{"Content-Type": "application/json"},
+            body:JSON.stringify(data),
+        })
+        
+        .then(()=>{
+           poruka.style.color="green";
+           poruka.textContent="Succesfully submited"
+            form.reset();
+        });
+        
+    });
+</script>
+
 
 
 

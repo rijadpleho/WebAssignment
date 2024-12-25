@@ -19,6 +19,9 @@ footer {
 body{
     background-color: rgb(183, 197, 197);
     margin-right: 0px;
+    color: black;
+   
+
 }
 
 .menu{
@@ -356,3 +359,157 @@ font-size: larger;
     object-fit: cover;
     margin: 0 auto;
 }
+
+.themeSwitcher{
+    display:flex;
+    gap:10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+body.dark{
+    background-color: darkred;
+    color:white
+}
+body.small{
+    font-size: 12px;
+}
+
+body.large{
+    font-size: 20px;
+}
+
+.AccMenu{
+width: 100%;
+max-width: 600px;
+margin: 20px;
+border: none;
+overflow: hidden;
+}
+.accI{
+    border-bottom: 1px solid;
+    margin: 10px 0;
+}
+.Naslov{
+    background-color: rgb(215, 218, 218);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.odgovor{
+    display: none;
+    padding: 15px;
+    background-color:aliceblue ;
+    font-size: medium;
+
+}
+
+
+.galerija {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    margin-top: -50px;
+}
+
+.galerija img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+   
+}
+
+
+.mod {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.mod img {
+    max-width: 70%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+.zatvori {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    
+}
+
+.viewmore{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+text-align: center;
+flex-direction: column;
+}
+.viewmorebtn{
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    
+    color: black;
+    border: none;
+    border-radius: 5px;  
+    background-color: lightcyan;
+
+}
+.textispod{
+    display: none;
+    text-align: center;
+    font-size: medium;
+    background-color: rgb(218, 218, 211);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+
+.novitab{
+    text-align: center;
+    color: #000000;
+    font-size: large;
+    text-decoration: underline;
+}
+
+#komentari li {
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+#komentari .edit {
+    background-color:  rgb(183, 197, 197);
+    color: black;
+    border: 0;
+    width: 100px;
+    margin-left: 10px;
+}
+
+
+#komentari .delete {
+    background-color:  rgb(183, 197, 197);
+    color: black;
+    border: 0;
+    width: 100px;
+    margin-left: 10px;
+}
+

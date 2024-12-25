@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
          <link rel="stylesheet"  href="main.css">
-        
+         <script src="main.js" defer></script>
     </head>
     <body>
 <div class="all">
@@ -22,6 +22,7 @@
         <a href="skates.html" style="color: white;">SKATES</a><br><br>
         <a href="rukavice.html" style="color: white;">GLOVES</a><br><br>
         <a href="kontakt.html" style="color: white;">ABOUT US</a><br>
+        <a href="champs.html" style="color: white;">CHAMPIONS</a><br>
     </nav>
 </nav>
 </nav>
@@ -64,6 +65,35 @@
    }
 </script>
 
+<div class="themeSwitcher">
+    <button id="light" style="background-color: lightcyan;">Light Theme</button>
+    <button id="dark" style="background-color: lightcyan;">Dark Theme</button>
+    <button id="small" style="background-color: lightcyan;">Small Font</button>
+    <button id="large" style="background-color: lightcyan;">Large Font</button>
+</div>
+<script>
+   document.getElementById("light").addEventListener("click",()=>{
+    document.body.classList.remove("dark");
+   });
+   document.getElementById("dark").addEventListener("click",()=>{
+    document.body.classList.add("dark");
+   });
+
+   document.getElementById("small").addEventListener("click",()=>{
+    document.body.classList.remove("large");
+    document.body.classList.add("small");
+   });
+   document.getElementById("large").addEventListener("click", ()=>{
+  document.body.classList.remove("small");
+  document.body.classList.add("large");
+});
+</script>
+
+<br><br>
+<div class="novitab">
+<a href="champs.html" target="_blank" style="color: black;">Take a look at the NHL CHAMPIONS - View More</a>
+</div>
+
 <br><br><br><br>
 
 <center><h3 style="color: black; font-size: 40px; font-family:Arial, Helvetica, sans-serif ;">Brands:</h3>
@@ -71,9 +101,9 @@
 
 <div class="brands">
     <div class="ccm">
-<a href="https://us.ccmhockey.com/homepage.html" target="_blank">
+
 <img src="ccm2.webp" alt="CCM" height="400%" width="400%">
-</a>
+
 </div>
 
 <div class="bauer">
@@ -84,7 +114,7 @@
 
 <div class="warrior">
 <a href="https://www.warrioreurope.com/" target="_blank">
-    <img src="warrior.png" alt="warrior" height="100%" width="200%">
+    <img src="warrior.png" alt="warrior" height="100%" width="200%">    
 </a>
 </div>
 
